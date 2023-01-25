@@ -2,6 +2,13 @@ const EmployeeArr = [] ; //Array to store the emplyee objects
 //Function to create the object of type employee using employee constructor
 //Arguements -- Employee Parameters
 //return type -- employee object
+
+//The Problem with this is 
+// I have to remember the parameters and the order in which they are 
+// whenever we have more than 3 arguement pass it as a function
+// Pass an object into the function
+// Test for places where the code will fail //
+// Code Like that
 function Employee(id,name,profileImage,introduction,profileLink){
     this.id = id,
     this.name = name;
@@ -198,3 +205,6 @@ console.log(findEmployee(EmployeeArr,{'id':"9"}));
 console.log(findEmployeeById(EmployeeArr,22));
 console.log(updateEmployeeById(EmployeeArr,"1",{'name':"vb"}));
 console.log(deleteEmployeeById(EmployeeArr,"9"));
+
+console.log("djflsdk");
+console.log(EmployeeArr.map((employee)=>new Employee(employee.id,employee.name,employee.profileImage,employee.introduction,employee.profileLink)));
